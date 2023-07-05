@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        body{
+            background-color: pink;
+            transition: 0.5s ease-in;
+        }
+
+        div {
+            border: 2px solid black;
+
+        }
+
+/* MOBILE FIRST */
+
+ /* Sélecteur d'attribut */
+ [class*="col-"]{
+    width : 100%
+}
+        /* EXTRA SMALL (devices under 600px) */
+        @media screen and (max-width: 576px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+
+        /* SMALL (devices 600px and up)*/
+        @media screen and (min-width: 576px) {
+            body {
+                background-color: rgb(43, 46, 226);
+            }
+        }
+        
+        /* MEDIUM (devices 768px and up)*/
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: rgb(43, 226, 73);
+            }
+
+            .col-md-6 {
+                width : 50%
+            }
+        }
+
+        /* LARGE (devices 992px and up)*/
+        @media screen and (min-width: 992px) {
+            body {
+                background-color: rgb(192, 226, 43);
+            }
+        }
+
+        /* EXTRALARGE (devices 1200px and up)*/
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: rgb(226, 183, 43);
+            }
+        }
+
+        /* DOUBLEEXTRALARGE (devices 1400px and up)*/
+        @media screen and (min-width: 1400px) {
+            body {
+                background-color: rgb(226, 86, 43);
+            }
+        }
+
+        /* Landscape (devices in landscape mode)
+        @media screen and (orientation: landscape) {
+            body {
+                background-color: rgb(99, 90, 88);
+            }
+        } */
+
+
+    </style>
+</head>
+
+<body>
+<div class="col-md-6">
+    <h1>Hello Responsive Wolrd</h1>
+</div>
+</body>
+
+</html>
