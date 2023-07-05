@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Training CSS</title>
+
+    <style>
+        #desktopNav li {
+            display: inline;
+            float: left;
+
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            padding: 15px;
+            color: black
+        }
+
+        li a:hover {
+            background-color: aliceblue;
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: lavender;
+        }
+
+        .active{
+            background-color: forestgreen;
+        }
+    </style>
+</head>
+
+<body>
+<nav id="desktopNav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<nav id="mobileNav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+  
+
+
+</body>
+
+</html>
