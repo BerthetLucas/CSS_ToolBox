@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice Responsive</title>
     <style>
-
-
-    .laboitequiflex{
-            height : 80vh; 
+        .laboitequiflex {
+            height: 80vh;
             width: 100%;
             background-color: forestgreen;
             display: flex;
@@ -17,10 +16,10 @@
             justify-content: space-around;
         }
 
-        .laboitequiflex div{
+        .laboitequiflex div {
             background-color: white;
-            padding : 1em;
-            border : 1px solid black;
+            padding: 1em;
+            border: 1px solid black;
             height: 11em;
             width: 11em;
             display: flex;
@@ -28,18 +27,17 @@
             align-items: center;
         }
 
-        .laboitequigrid{
-            height : 50vh;
-            display : grid;
-            gap : 10px;
-            background-color : orange
-        
+        .laboitequigrid {
+            height: 50vh;
+            display: grid;
+            gap: 10px;
+            background-color: orange
         }
 
         .laboitequigrid div {
             background-color: white;
             border: 1px solid black;
-            height : 100%; 
+            height: 100%;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -50,68 +48,65 @@
 
         /* SMALL (devices 600px and up)*/
         @media screen and (min-width: 576px) {
-            
-        .laboitequiflex {
-            flex-direction: row;
-            flex-wrap: wrap;
+
+            .laboitequiflex {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
 
-        .item1 {
-            grid-column: 1;
-            grid-row : 1; 
+            .item1 {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .item2 {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .item3 {
+                grid-column: 1/3;
+                grid-row: 2;
+            }
+
         }
 
-        .item2 {
-            grid-column: 2;
-            grid-row : 1; 
-        }
-
-        .item3 {
-            grid-column: 1/3;
-            grid-row : 2; 
-        }
-
-        }
-        
         /* MEDIUM (devices 768px and up)*/
         @media screen and (min-width: 768px) {
+            .laboitequiflex{
+                justify-content: space-around;
+            }
 
             .item1 {
-            grid-column: 1;
-            grid-row : 1; 
-        }
+                grid-column: 1;
+                grid-row: 1;
+            }
 
-        .item2 {
-            grid-column: 2;
-            grid-row : 1; 
-        }
+            .item2 {
+                grid-column: 2;
+                grid-row: 1;
+            }
 
-        .item3 {
-            grid-column: 3;
-            grid-row : 1; 
-        }
-            
+            .item3 {
+                grid-column: 3;
+                grid-row: 1;
+            }
+
         }
 
         /* LARGE (devices 992px and up)*/
-        @media screen and (min-width: 992px) {
-    
-
-        }
+        @media screen and (min-width: 992px) {}
 
         /* EXTRALARGE (devices 1200px and up)*/
-        @media screen and (min-width: 1200px) {
-         
-        }
+        @media screen and (min-width: 1200px) {}
 
         /* DOUBLEEXTRALARGE (devices 1400px and up)*/
-        @media screen and (min-width: 1400px) {
-            
-        }
-
+        @media screen and (min-width: 1400px) {}
     </style>
-    
+
 </head>
+
 <body>
 
     <h1 style="text-align: center; background-color: forestgreen;">La boite qui flex !</h1>
@@ -128,6 +123,7 @@
         <div class="item2">2</div>
         <div class="item3">3</div>
     </div>
-    
+
 </body>
+
 </html>
