@@ -45,7 +45,11 @@
 
         }
 
-        .flex1 {
+        img {
+            width : 100%
+        }
+
+        /* .flex1 {
             background-image: url(./img/mouette1.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -79,7 +83,7 @@
             background-image: url(./img/mouette3.jpg);
             background-size: cover;
             background-repeat: no-repeat;
-        }
+        } */
 
 
 
@@ -93,6 +97,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
+
 
             .item1 {
                 grid-column: 1;
@@ -148,19 +153,19 @@
 
 <body>
 
-    <h1 style="text-align: center; background-color: #2E5EAA;">La boite qui flex !</h1>
+    <h1 style="text-align: center; background-color: #2E5EAA; color : white">La boite qui flex !</h1>
     <div class="laboitequiflex">
-        <div class="flex1"></div>
-        <div class="flex2"></div>
-        <div class="flex3"></div>
+        <div class="flex1"><img src="./img/mouette1.jpg"></div>
+        <div class="flex2"><img src="./img/mouette2.jpg"></div>
+        <div class="flex3"><img src="./img/mouette3.jpg"></div>
     </div>
 
 
     <h1 style="text-align: center; background-color: #1C3E68; color : white">La boite qui grid !</h1>
     <div class="laboitequigrid">
-        <div class="item1"></div>
-        <div class="item2"></div>
-        <div class="item3"></div>
+        <div class="item1"><img src="./img/mouette1.jpg"></div>
+        <div class="item2"><img src="./img/mouette2.jpg"></div>
+        <div class="item3"><img src="./img/mouette3.jpg"></div>
     </div>
 
 </body>
