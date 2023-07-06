@@ -23,10 +23,24 @@
         }
 
         iframe {
-            width : 100%;
+            width: 100%;
             aspect-ratio: 560/315;
         }
-                /* EXTRA SMALL (devices under 600px)
+
+        video {
+            max-width: 100%;
+            position: absolute;
+        }
+
+        .content {
+            position: relative;
+            width: 560px;
+            top :16em;
+            color : white; 
+            background-color: rgb(10, 10, 10, 0.5);
+        }
+
+        /* EXTRA SMALL (devices under 600px)
                 @media screen and (max-width: 576px) {
                     iframe{
                         height : 300px
@@ -66,7 +80,6 @@
                         height : 700px
                     }
         } */
-
     </style>
 </head>
 
@@ -74,16 +87,34 @@
     <!-- <img src="img/mouette3.jpg" alt="photo d mouette">
     <div class="test"></div> -->
 
+    <section>
+        <video width="560px" height="315px" autoplay loop muted>
+            <source src="./img/meeting_-_1035 (360p).mp4" type="video/mp4">
+        </video>
+
+        <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Minus nostrum, perferendis animi consequatur rem quis distinctio
+            commodi alias tempora voluptates illum itaque, officia adipisci
+            voluptatem tenetur similique beatae consequuntur enim!
+        </div>
+    </section>
+
+
     <picture>
         <source media="(min-width:992px)" srcset="img/mouette1.jpg">
         <source media="(min-width:650px)" srcset="img/mouette2.jpg">
         <source media="(min-width:320px)" srcset="img/mouette3.jpg">
         <img src="/img/mouette1.jpg">
     </picture>
-    
-    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11143.999009990406!2d4.96001975!3d45.711041800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c5bbf92bf861%3A0x920b0b8133fc3213!2sLidl!5e0!3m2!1sfr!2sfr!4v1688645471070!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11143.999009990406!2d4.96001975!3d45.711041800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c5bbf92bf861%3A0x920b0b8133fc3213!2sLidl!5e0!3m2!1sfr!2sfr!4v1688645471070!5m2!1sfr!2sfr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </body>
 
