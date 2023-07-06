@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            border: 2px solid black;
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+
+        }
+
+        th,
+        td {
+            border: grey 1px solid;
+        }
+
+        td:hover {
+            background-color: aqua;
+            transition: ease-in 0.5s;
+        }
+
+
+
+        thead {
+            background-color: forestgreen;
+        }
+
+
+        tr:nth-child(even){ /*deuxième option pour les lignes paires : odd */
+            background-color: rgb(82, 185, 129);
+        }
+
+        img {
+            width : 30%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Menu 1</th>
+                <th>Menu 2</th>
+                <th>Menu 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tacos</td>
+                <td>galette</td>
+                <td>tacos</td>
+            </tr>
+            <tr>
+                <td>10 €</td>
+                <td>8 €</td>
+                <td>9 €</td>
+            </tr>
+            <tr>
+                <td>Tacos</td>
+                <td>galette</td>
+                <td>tacos</td>
+            </tr>
+            <tr>
+                <td>10 €</td>
+                <td>8 €</td>
+                <td>9 €</td>
+            </tr>
+            <tr>
+                <td>Tacos</td>
+                <td>galette</td>
+                <td>tacos</td>
+            </tr>
+            <tr>
+                <td>10 €</td>
+                <td>8 €</td>
+                <td>9 €</td>
+            </tr>
+            <tr>
+                <td>Tacos</td>
+                <td>galette</td>
+                <td>tacos</td>
+            </tr>
+            <tr>
+                <td>10 €</td>
+                <td>8 €</td>
+                <td>9 €</td>
+            </tr>
+            <tr>
+                <td><img src="/img/mouette1.jpg"></td>
+                <td>galette</td>
+                <td>tacos</td>
+            </tr>
+            <tr>
+                <td>10 €</td>
+                <td>8 €</td>
+                <td>9 €</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
