@@ -9,7 +9,7 @@
         .laboitequiflex {
             height: 80vh;
             width: 100%;
-            background-color: forestgreen;
+            background-color: #2E5EAA;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -31,7 +31,7 @@
             height: 50vh;
             display: grid;
             gap: 10px;
-            background-color: orange
+            background-color: #1C3E68
         }
 
         .laboitequigrid div {
@@ -44,6 +44,45 @@
             align-items: center;
 
         }
+
+        .flex1 {
+            background-image: url(./img/mouette1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .flex2 {
+            background-image: url(./img/mouette2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .flex3 {
+            background-image: url(./img/mouette3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .item1 {
+            background-image: url(./img/mouette1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .item2 {
+            background-image: url(./img/mouette2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .item3 {
+            background-image: url(./img/mouette3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+
 
 
         /* SMALL (devices 600px and up)*/
@@ -109,19 +148,19 @@
 
 <body>
 
-    <h1 style="text-align: center; background-color: forestgreen;">La boite qui flex !</h1>
+    <h1 style="text-align: center; background-color: #2E5EAA;">La boite qui flex !</h1>
     <div class="laboitequiflex">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div class="flex1"></div>
+        <div class="flex2"></div>
+        <div class="flex3"></div>
     </div>
 
 
-    <h1 style="text-align: center; background-color: orange;">La boite qui grid !</h1>
+    <h1 style="text-align: center; background-color: #1C3E68; color : white">La boite qui grid !</h1>
     <div class="laboitequigrid">
-        <div class="item1">1</div>
-        <div class="item2">2</div>
-        <div class="item3">3</div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
     </div>
 
 </body>
