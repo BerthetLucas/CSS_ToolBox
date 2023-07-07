@@ -1,86 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulaire</title>
-    <style>
-      label,
-      input {
-        display: block;
-      }
-    </style>
-  </head>
 
-  <body>
-    <form action="https://dekpo.com/form/post.php" method="POST">
-      <label for="civilite">Nom : </label>
-      <select name="civilite" required>
-        <option value="">Choisir</option>
-        <option>Mr</option>
-        <option>Mrs</option>
-        <option>They/Them</option>
-      </select>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire</title>
+  <style>
+    label,
+    input {
+      display: block;
+    }
 
-      <label for="nom">Nom : </label>
-      <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" />
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=tel],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid grey;
+      border-radius: 5px;
+      background-color: bisque
+    }
 
-      <!-- attribut required seul si champs nécessaire -->
+    input[type=submit] {
 
-      <label for="prenom">Prénom : </label>
-      <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" />
+      border: none;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 0;
+      margin: 10px 0;
+      background-color: forestgreen;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white
+    }
 
-      <label for="mail">Email</label>
-      <input
-        type="email"
-        name="email"
-        placeholder="Ex : kikou69@yahoo.fr"
-        id="mail"
-      />
+    input[type=reset] {
 
-      <label for="password">MDP</label>
-      <input type="password" name="password" id="password" maxlength="3" />
+      border: none;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 0;
+      margin: 10px 0;
+      background-color: rgb(139, 41, 34);
+      border-radius: 5px;
+      font-weight: bold;
+      color: white
+    }
 
-      <label for="fichier">Fichier</label>
-      <input type="file" name="file" id="fichier" />
+    .label-file {
+      color: white;
+      font-weight: bold;
+      background-color: rgba(5, 44, 4, 0.973);
+      box-sizing: border-box;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 1em;
+    }
 
-      <label for="tel">tel</label>
-      <input type="tel" name="tel" id="tel" />
+    .label-file:hover {
+      opacity: 50%;
+      cursor: pointer;
+    }
 
-      <label for="message">Ecrivez nous</label>
-      <textarea
-        type="message"
-        id="message"
-        rows="6"
-        cols="25"
-        maxlength="20"
-      ></textarea>
+    input[type=file] {
 
+      display: none;
+    }
+
+    input[type="checkbox"] {
+
+      width: 100%;
+      background-color: rgb(26, 121, 17);
+      border-radius: 5px;
+
+    }
+
+    .label-poste {
+      text-align: center;
+      margin-bottom: 1em;
+
+    }
+
+    .test-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    #test {
+      width: 50%;
+      height: 2em;
+    }
+
+    .label-container {
+      display: block;
+      position: relative;
+      padding: 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+      padding-left: 3em;
+      margin-bottom: 2em;
+
+    }
+
+    .label-container input {
+
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      cursor: pointer;
+
+    }
+
+    .label-container input:checked~.fakeCheck {
+      background-color: green;
+    }
+
+
+
+    .fakeCheck::after {
+      content: "";
+      position: absolute;
+      display: none;
+
+    }
+
+
+    .label-container input:checked~.fakeCheck:after {
+      display: block;
+    }
+
+    .fakeCheck {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30px;
+      width: 30px;
+      background-color: red;
+    }
+
+    .label-container .fakeCheck:after {
+      left: 10px;
+      top: 5px;
+      height: 15px;
+      width: 10px;
+      border: solid white 2px;
+      border-width: 0 1.5px 3px 0;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <form action="https://dekpo.com/form/post.php" method="POST">
+    <label for="civilite">Civilité :</label>
+    <select name="civilite" required>
+      <option value="">Choisir</option>
+      <option>Mr</option>
+      <option>Mrs</option>
+      <option>They/Them</option>
+    </select>
+
+    <label for="nom">Nom : </label>
+    <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" />
+
+    <!-- attribut required seul si champs nécessaire -->
+
+    <label for="prenom">Prénom : </label>
+    <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" />
+
+    <label for="mail">Email</label>
+    <input type="email" name="email" placeholder="Ex : kikou69@yahoo.fr" id="mail" />
+
+    <label for="password">Mot de passe</label>
+    <input type="password" name="password" id="password" maxlength="3" />
+
+    <label for="fichier" class="label-file">Joindre mon fichier</label>
+    <input type="file" name="file" id="fichier" />
+
+    <label for="tel">Téléphone</label>
+    <input type="tel" name="tel" id="tel" />
+
+    <label for="message">Ecrivez nous</label>
+    <textarea type="message" id="message" rows="6" cols="25" maxlength="20"></textarea>
+
+    <!-- <div class="label-poste">
       <label for="poste">Poste à pourvoir</label>
       Dev front
-      <input type="checkbox" name="poste[]" value="devFront" checked />
+      <input type="checkbox" name="poste[]" value="devFront" id="cb-devfront" checked />
+      <span class="fake-check"></span>
       Dev back
       <input type="checkbox" name="poste[]" value="devback" />
+    </div> -->
 
-      <label for="salaire">Salaire</label>
+    <label class="label-container" for="devfront">DevFront
+      <input type="checkbox" name=poste[] checked id="devfront" value="DevFront">
+      <span class="fakeCheck"></span>
+    </label>
+
+    <div class="label-salaire">
+      <label for="salaire" class="salaire-container">Salaire</label>
       1300€
       <input type="radio" name="salaire" id="salaire" checked />
       1500€
       <input type="radio" name="salaire" id="salaire" />
       1800€
       <input type="radio" name="salaire" id="salaire" />
+    </div>
+    <!-- Entrée type jauge  -->
+    <div class="test-container">
+      <label id="test"></label><span id="valtaille"></span>
+      <input type="range" min="1" max="10" step="1" id="test" name="test" list="tailles"
+        oninput="document.getElementById('valtaille').innerHTML=this.value+'cm'" />
+    </div>
 
-      <label for="autre">Autre</label>
-      1300€
-      <input type="radio" name="autre" id="autre" checked />
-      1500€
-      <input type="radio" name="autre" id="autre" />
-      1800€
-      <input type="radio" name="autre" id="autre" />
+    <!-- Fin entrée type jauge -->
 
-      <input type="reset" value="annuler" />
+    <input type="reset" value="annuler" />
 
-      <input type="submit" value="check it out" />
-    </form>
-  </body>
+    <input type="submit" value="check it out" />
+
+
+  </form>
+</body>
+
 </html>
