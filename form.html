@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulaire</title>
     <style>
-        label, input {
-            display: block;
-        }
-        
+      label,
+      input {
+        display: block;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <form action="https://dekpo.com/form/post.php" method="POST">
+      <label for="civilite">Nom : </label>
+      <select name="civilite" required>
+        <option value="">Choisir</option>
+        <option>Mr</option>
+        <option>Mrs</option>
+        <option>They/Them</option>
+      </select>
 
-        <label for="civilite">Nom : </label>
-        <select name="civilite" required>
-            <option value="">Choisir</option>
-            <option>Mr</option>
-            <option>Mrs</option>
-            <option>They/Them</option>
-        </select>
+      <label for="nom">Nom : </label>
+      <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" />
 
-        <label for="nom">Nom : </label>
-        <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" required>
+      <!-- attribut required seul si champs nécessaire -->
 
-        <!-- attribut required seul si champs nécessaire -->
-        
-        <label for="prenom">Prénom : </label>
-        <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" required>
-    
-        <label for="mail">Email</label>
-        <input type="email" name="email" placeholder="Ex : kikou69@yahoo.fr" id="mail" required>
+      <label for="prenom">Prénom : </label>
+      <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" />
 
-        <label for="password">MDP</label>
-        <input type="password" name="password" id="password">
-        
+      <label for="mail">Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Ex : kikou69@yahoo.fr"
+        id="mail"
+      />
 
-        <label for="fichier">Fichier</label>
-        <input type="file" name="file" id="fichier">
+      <label for="password">MDP</label>
+      <input type="password" name="password" id="password" maxlength="3" />
 
-        <label for="tel">tel</label>
-        <input type="tel" name="tel" id="tel">
+      <label for="fichier">Fichier</label>
+      <input type="file" name="file" id="fichier" />
 
-        <input type="reset" value="annuler">
+      <label for="tel">tel</label>
+      <input type="tel" name="tel" id="tel" />
 
+      <label for="message">Ecrivez nous</label>
+      <textarea
+        type="message"
+        id="message"
+        rows="6"
+        cols="25"
+        maxlength="20"
+      ></textarea>
 
+      <label for="poste">Poste à pourvoir</label>
+      Dev front
+      <input type="checkbox" name="poste[]" value="devFront" checked />
+      Dev back
+      <input type="checkbox" name="poste[]" value="devback" />
 
-        <input type="submit" value="check it out">
+      <label for="salaire">Salaire</label>
+      1300€
+      <input type="radio" name="salaire" id="salaire" checked />
+      1500€
+      <input type="radio" name="salaire" id="salaire" />
+      1800€
+      <input type="radio" name="salaire" id="salaire" />
+
+      <label for="autre">Autre</label>
+      1300€
+      <input type="radio" name="autre" id="autre" checked />
+      1500€
+      <input type="radio" name="autre" id="autre" />
+      1800€
+      <input type="radio" name="autre" id="autre" />
+
+      <input type="reset" value="annuler" />
+
+      <input type="submit" value="check it out" />
     </form>
-</body>
+  </body>
 </html>

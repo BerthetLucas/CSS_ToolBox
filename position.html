@@ -1,92 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position</title>
     <style>
-       div {
-            border : 1px solid black; 
+        div {
+            border: 1px solid black;
         }
 
-        .top-left{
-            position : absolute;
-            left : 10px; 
-            top : 10px
+        .top-left {
+            position: absolute;
+            left: 10px;
+            top: 10px
         }
 
-        .top-middle{
-            position : absolute;
-            left : 50%; 
-            top : 10px;
-            transform : translate(-50%, 0%) 
+        .top-middle {
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform: translate(-50%, 0%)
         }
 
-        .top-right{
-            position : absolute;
-            right : 10px; 
-            top : 10px
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 10px
         }
 
         .left {
-            position : absolute; 
-            left : 10px;
-            top : 50%; 
+            position: absolute;
+            left: 10px;
+            top: 50%;
             transform: translate(0%, -50%);
         }
 
         .right {
-            position : absolute; 
-            right : 10px;
-            top : 50%; 
+            position: absolute;
+            right: 10px;
+            top: 50%;
             transform: translate(0%, -50%);
         }
 
         .middle {
-            position : absolute; 
-            left : 50%; 
-            bottom : 50%; 
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
             transform: translate(-50%, 50%)
         }
 
-        .bottom-left{
-            position : absolute;
-            left : 10px; 
+        .bottom-left {
+            position: absolute;
+            left: 10px;
             bottom: 10px
         }
 
-        .bottom-middle{
-            position : absolute;
-            left : 50%; 
-            bottom : 10px;
-            transform : translate(-50%, 0%) 
+        .bottom-middle {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translate(-50%, 0%)
         }
 
-        .bottom-right{
-            position : absolute;
-            right : 10px; 
-            bottom : 10px
+        .bottom-right {
+            position: absolute;
+            right: 10px;
+            bottom: 10px
         }
 
         section {
             position: fixed;
-            height : 50vh; 
+            height: 50vh;
             width: 100%;
             background-color: rgb(26, 230, 162);
         }
     </style>
 </head>
+
 <body>
     <section>
-    <div class="top-left">Top left</div>
-    <div class="top-middle">Top middle</div>
-    <div class="top-right">Top right</div>
-    <div class="left">left</div>
-    <div class="middle">middle</div>
-    <div class="right">right</div>
-    <div class="bottom-left">bot-left</div>
-    <div class="bottom-middle">bot-middle</div>
-    <div class="bottom-right">bot-rht</div>
-</section>
+        <div class="top-left">Top left</div>
+        <div class="top-middle">Top middle</div>
+        <div class="top-right">Top right</div>
+        <div class="left">left</div>
+        <div class="middle">middle</div>
+        <div class="right">right</div>
+        <div class="bottom-left">bot-left</div>
+        <div class="bottom-middle">bot-middle</div>
+        <div class="bottom-right">bot-rht</div>
+    </section>
 </body>
+
 </html>
