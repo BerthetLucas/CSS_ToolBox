@@ -18,13 +18,14 @@
     select,
     textarea {
       width: 100%;
-      padding: 10;
+      padding: 10px;
       margin: 10px 0;
       box-sizing: border-box;
       border: 1px solid grey;
       border-radius: 5px;
       background-color: bisque
     }
+
 
     input[type=submit] {
 
@@ -126,15 +127,12 @@
       background-color: green;
     }
 
-
-
     .fakeCheck::after {
       content: "";
       position: absolute;
       display: none;
 
     }
-
 
     .label-container input:checked~.fakeCheck:after {
       display: block;
@@ -158,10 +156,32 @@
       border-width: 0 1.5px 3px 0;
       transform: rotate(45deg);
     }
+
+    .patronyme {
+      display: flex;
+      justify-content: center;
+      gap: 1em
+    }
+
+    .p1 {
+      width: 100%
+    }
+
+    .p2 {
+      width: 100%
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(26, 121, 17);
+    }
   </style>
 </head>
 
 <body>
+
+  <h1> Form training </h1>
+
   <form action="https://dekpo.com/form/post.php" method="POST">
     <label for="civilite">Civilité :</label>
     <select name="civilite" required>
@@ -171,13 +191,17 @@
       <option>They/Them</option>
     </select>
 
-    <label for="nom">Nom : </label>
-    <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" />
-
-    <!-- attribut required seul si champs nécessaire -->
-
-    <label for="prenom">Prénom : </label>
-    <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" />
+    <div class="patronyme">
+      <div class="p1">
+        <label for="nom">Nom : </label>
+        <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" />
+      </div>
+      <!-- attribut required seul si champs nécessaire -->
+      <div class="p2">
+        <label for="prenom">Prénom : </label>
+        <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" />
+      </div>
+    </div>
 
     <label for="mail">Email</label>
     <input type="email" name="email" placeholder="Ex : kikou69@yahoo.fr" id="mail" />

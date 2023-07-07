@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive</title>
     <style>
-        body{
+        body {
             background-color: pink;
             transition: 0.5s ease-in;
         }
@@ -16,12 +16,13 @@
 
         }
 
-/* MOBILE FIRST */
+        /* MOBILE FIRST */
 
- /* Sélecteur d'attribut */
- [class*="col-"]{
-    width : 100%
-}
+        /* Sélecteur d'attribut */
+        [class*="col-"] {
+            width: 100%
+        }
+
         /* EXTRA SMALL (devices under 600px) */
         @media screen and (max-width: 576px) {
             body {
@@ -35,7 +36,7 @@
                 background-color: rgb(43, 46, 226);
             }
         }
-        
+
         /* MEDIUM (devices 768px and up)*/
         @media screen and (min-width: 768px) {
             body {
@@ -43,7 +44,7 @@
             }
 
             .col-md-6 {
-                width : 50%
+                width: 50%
             }
         }
 
@@ -74,15 +75,13 @@
                 background-color: rgb(99, 90, 88);
             }
         } */
-
-
     </style>
 </head>
 
 <body>
-<div class="col-md-6">
-    <h1>Hello Responsive Wolrd</h1>
-</div>
+    <div class="col-md-6">
+        <h1>Hello Responsive Wolrd</h1>
+    </div>
 </body>
 
 </html>
