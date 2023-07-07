@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        label, input {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="https://dekpo.com/form/post.php" method="POST">
+
+        <label for="civilite">Nom : </label>
+        <select name="civilite" required>
+            <option value="">Choisir</option>
+            <option>Mr</option>
+            <option>Mrs</option>
+            <option>They/Them</option>
+        </select>
+
+        <label for="nom">Nom : </label>
+        <input type="text" name="nom" placeholder="Ex : Gérard" id="nom" required>
+
+        <!-- attribut required seul si champs nécessaire -->
+        
+        <label for="prenom">Prénom : </label>
+        <input type="text" name="prenom" placeholder="Ex : Durand" id="prenom" required>
+    
+        <label for="mail">Email</label>
+        <input type="email" name="email" placeholder="Ex : kikou69@yahoo.fr" id="mail" required>
+
+        <label for="password">MDP</label>
+        <input type="password" name="password" id="password">
+        
+
+        <label for="fichier">Fichier</label>
+        <input type="file" name="file" id="fichier">
+
+        <label for="tel">tel</label>
+        <input type="tel" name="tel" id="tel">
+
+        <input type="reset" value="annuler">
+
+
+
+        <input type="submit" value="check it out">
+    </form>
+</body>
+</html>
